@@ -55,7 +55,7 @@ Android 使用步驟
             return Arrays.<ReactPackage>asList(
                     new MainReactPackage(),
                     new LinearGradientPackage(), 
-                    new HelloWorldPackage()); <= 加入HelloWorldPackage()
+                    new HelloWorldPackage()); //加入HelloWorldPackage()
         }
     };
 
@@ -103,7 +103,7 @@ iOS使用步驟
    
    @end
 
-3. import js & 呼叫 addEvent
+3. import js,呼叫 addEvent
    import {
       NativeModules,
       ......
