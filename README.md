@@ -1,6 +1,6 @@
 # AndroidDepends
 
-ＪＳ呼叫 建立原生方法 （建議使用原生開發時，開啟Android studio || Xcode 可避免不必要語法錯誤）
+ＪＳ呼叫 建立原生方法 （建議原生開發使用 Android studio || Xcode 來進行撰寫）
 
 Android 使用步驟
 
