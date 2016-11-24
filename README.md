@@ -102,18 +102,28 @@ iOS使用步驟
    
 2. 建立 CalendarManager.m (路徑: $(project-root)/AndroidDepends/ios/CalendarManager.m)
 
-   #import "CalendarManager.h"
-   #import "RCTLog.h"
-   @implementation CalendarManager
-   
-   RCT_EXPORT_MODULE(); //宣告 巨集
+      //
+      //  CalendarManager.m
+      //  AndroidDepends
+      //
+      //  Created by yuhung on 2016/11/24.
+      //  Copyright © 2016年 Facebook. All rights reserved.
+      //
 
-   RCT_EXPORT_METHOD(addEvent:(NSString *)name location:(NSString *)location) //宣告巨集方法,建立addEvent方法
-   {
-      RCTLogInfo(@"Pretending to create an event %@ at %@",name,location);
-   }
-   
-   @end
+      #import <Foundation/Foundation.h>
+      #import "CalendarManager.h"
+      #import "RCTLog.h"
+
+      @implementation CalendarManager
+
+      RCT_EXPORT_MODULE();
+
+      RCT_EXPORT_METHOD(addEvent:(NSString *)name location:(NSString *)location){
+
+        RCTLogInfo(@"Pretending to create an event %@ at %@",name,location);
+      }
+
+      @end
 
 3. import js,呼叫 addEvent
    import {
