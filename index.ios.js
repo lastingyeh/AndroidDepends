@@ -8,11 +8,11 @@ import React, {Component} from 'react';
 import {
     AppRegistry,
     NativeModules,
-    View,
     Text,
-    StyleSheet
-
 } from 'react-native';
+
+import LinearGradient from 'react-native-linear-gradient';
+import styles from './style';
 
 class RunObjectCMethod extends Component {
 
@@ -24,31 +24,13 @@ class RunObjectCMethod extends Component {
         CalendarManager.addEvent('Birthday Party', '4 Private Drive, Surrey');
     }
 
-    componentDidMount() {
-
-    }
-
     render() {
         return (
-            <View style={styles.container}>
-                <Text style={styles.content}>Object C calling</Text>
-            </View>
+            <LinearGradient colors={['#FFFFFF','#00A8A8']} style={styles.container}>
+                <Text style={styles.welcome}>Object C calling</Text>
+            </LinearGradient>
         );
     }
 }
-
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        flexDirection: 'column',
-        marginTop: 20,
-        alignItems: 'center',
-        justifyContent: 'center'
-    },
-    content: {
-        fontSize: 24,
-        color: '#FF0000'
-    }
-});
 
 AppRegistry.registerComponent('AndroidDepends', () => RunObjectCMethod);
