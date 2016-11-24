@@ -63,19 +63,14 @@ Android 使用步驟
 		}
 	   };
 
-4.建立HelloWorld.js 引入HelloWorld (路徑:${project-root}/HelloWorld.js)
-          
-	  import { NativeModules } from 'react-native';
-	  export default NativeModules.HelloWorld;
+4.js 呼叫 greeting(...)
 
-5.呼叫 HelloWorld.greeting(...)
+	var HelloWorld = NativeModules.HelloWorld;
+        HelloWorld.greeting("HelloWorld");
 
-	import HelloWorld from './HelloWorld.js';
-	HelloWorld.greeting("bonnie"); //直接呼叫
-
-6.備註：查看 Log.i(..)訊息
-  
-  	在專案目錄下 terminal: adb logcat | grep HelloWorld
+5.備註：查看 Log.i(..)訊息 在專案目錄下 terminal: 
+	
+	adb logcat | grep HelloWorld
 	
 iOS使用步驟
 
@@ -105,12 +100,10 @@ iOS使用步驟
 
 	       @end     
 
-3. 呼叫 addEvent
+3. js 呼叫 addEvent(...,...)
 
-	       import { NativeModules } from 'react-native';
-
-	       var CalendarManager = NativeModules.CalendarManager;      
-	       CalendarManager.addEvent('Birthday Party', '4 Private Drive, Surrey');
+		var CalendarManager = NativeModules.CalendarManager;
+        	CalendarManager.addEvent('Birthday Party', '4 Private Drive, Surrey');
  
  資料來源：
  
