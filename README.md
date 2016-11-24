@@ -82,9 +82,23 @@ class Gradient extends Component {
 iOS使用步驟
 1. 建立 CalendarManager.h (路徑: $(project-root)/AndroidDepends/ios/CalendarManager.h)
 
-   #import "RCTBridgeModule.h"
-   @interface CalendarManager :NSObject <RCTBridgeModule>
-   @end
+      //
+      //  CalendarManager.h
+      //  AndroidDepends
+      //
+      //  Created by yuhung on 2016/11/24.
+      //  Copyright © 2016年 Facebook. All rights reserved.
+      //
+
+      #ifndef CalendarManager_h
+      #define CalendarManager_h
+      #import "RCTBridgeModule.h"
+
+      @interface CalendarManager :NSObject <RCTBridgeModule>
+
+      @end
+
+#endif /* CalendarManager_h */
    
 2. 建立 CalendarManager.m (路徑: $(project-root)/AndroidDepends/ios/CalendarManager.m)
 
