@@ -85,10 +85,6 @@ iOS使用步驟
       //
       //  CalendarManager.h
       //  AndroidDepends
-      //
-      //  Created by yuhung on 2016/11/24.
-      //  Copyright © 2016年 Facebook. All rights reserved.
-      //
 
       #ifndef CalendarManager_h
       #define CalendarManager_h
@@ -97,19 +93,12 @@ iOS使用步驟
       @interface CalendarManager :NSObject <RCTBridgeModule>
 
       @end
-
-#endif /* CalendarManager_h */
    
 2. 建立 CalendarManager.m (路徑: $(project-root)/AndroidDepends/ios/CalendarManager.m)
-
       //
-      //  CalendarManager.m
+      //  CalendarManager.h
       //  AndroidDepends
-      //
-      //  Created by yuhung on 2016/11/24.
-      //  Copyright © 2016年 Facebook. All rights reserved.
-      //
-
+      
       #import <Foundation/Foundation.h>
       #import "CalendarManager.h"
       #import "RCTLog.h"
