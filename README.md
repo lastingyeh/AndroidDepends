@@ -76,34 +76,33 @@ iOS使用步驟
 
 1. 建立 CalendarManager.h (路徑: $(projectroot)/AndroidDepends/ios/CalendarManager.h)
 
-	      #ifndef CalendarManager_h
-	      #define CalendarManager_h
-	      #import "RCTBridgeModule.h"
+         #ifndef CalendarManager_h
+         #define CalendarManager_h 
+         #import "RCTBridgeModule.h"
 
-	      @interface CalendarManager :NSObject <RCTBridgeModule>
-
-	      @end
+         @interface CalendarManager :NSObject <RCTBridgeModule>
+         @end
    
 2. 建立 CalendarManager.m (路徑: $(projectroot)/AndroidDepends/ios/CalendarManager.m)
 
-	       #import "CalendarManager.h"
-	       #import "RCTLog.h"
+         #import "CalendarManager.h"
+         #import "RCTLog.h"
 
-	       @implementation CalendarManager
+         @implementation CalendarManager
 
-	       RCT_EXPORT_MODULE();
+         RCT_EXPORT_MODULE();
 
-	       RCT_EXPORT_METHOD(addEvent:(NSString *)name location:(NSString *)location)
-	       {
-		   RCTLogInfo(@"Pretending to create an event %@ at %@",name,location);
-	       }
+         RCT_EXPORT_METHOD(addEvent:(NSString *)name location:(NSString *)location)
+         {
+	     RCTLogInfo(@"Pretending to create an event %@ at %@",name,location);
+         }
 
-	       @end     
+         @end     	       
 
 3. js 呼叫 addEvent(...,...)
 
-		var CalendarManager = NativeModules.CalendarManager;
-        	CalendarManager.addEvent('Birthday Party', '4 Private Drive, Surrey');
+	   var CalendarManager = NativeModules.CalendarManager;
+       	   CalendarManager.addEvent('Birthday Party', '4 Private Drive, Surrey');
  
  資料來源：
  
