@@ -20,7 +20,6 @@ class RunObjectCMethod extends Component {
         super(props);
 
         var CalendarManager = NativeModules.CalendarManager;
-
         CalendarManager.addEvent('Birthday Party', '4 Private Drive, Surrey');
     }
 
