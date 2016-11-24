@@ -85,26 +85,26 @@ iOS使用步驟
    
 2. 建立 CalendarManager.m (路徑: $(projectroot)/AndroidDepends/ios/CalendarManager.m)
 
-       #import "CalendarManager.h"
-       #import "RCTLog.h"
+	       #import "CalendarManager.h"
+	       #import "RCTLog.h"
 
-       @implementation CalendarManager
+	       @implementation CalendarManager
 
-       RCT_EXPORT_MODULE();
+	       RCT_EXPORT_MODULE();
 
-       RCT_EXPORT_METHOD(addEvent:(NSString *)name location:(NSString *)location)
-       {
-           RCTLogInfo(@"Pretending to create an event %@ at %@",name,location);
-       }
+	       RCT_EXPORT_METHOD(addEvent:(NSString *)name location:(NSString *)location)
+	       {
+		   RCTLogInfo(@"Pretending to create an event %@ at %@",name,location);
+	       }
 
-       @end     
+	       @end     
 
 3. 呼叫 addEvent
 
-       import { NativeModules } from 'react-native';
+	       import { NativeModules } from 'react-native';
 
-       var CalendarManager = NativeModules.CalendarManager;      
-       CalendarManager.addEvent('Birthday Party', '4 Private Drive, Surrey');
+	       var CalendarManager = NativeModules.CalendarManager;      
+	       CalendarManager.addEvent('Birthday Party', '4 Private Drive, Surrey');
  
  資料來源：
  1.https://github.com/bonniee/learning-react-native
