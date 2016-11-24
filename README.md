@@ -95,11 +95,11 @@ iOS使用步驟
       @end
    
 2. 建立 CalendarManager.m (路徑: $(project-root)/AndroidDepends/ios/CalendarManager.m)
+      
       //
       //  CalendarManager.h
       //  AndroidDepends
       
-      #import <Foundation/Foundation.h>
       #import "CalendarManager.h"
       #import "RCTLog.h"
 
@@ -111,7 +111,6 @@ iOS使用步驟
 
         RCTLogInfo(@"Pretending to create an event %@ at %@",name,location);
       }
-
       @end
 
 3. import js,呼叫 addEvent
