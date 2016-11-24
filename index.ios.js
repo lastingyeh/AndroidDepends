@@ -4,50 +4,51 @@
  * @flow
  */
 
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import {
-  AppRegistry,
-  StyleSheet,
-  Text,
-  View
+    AppRegistry,
+    NativeModules,
+    View,
+    Text,
+    StyleSheet
+
 } from 'react-native';
 
-export default class AndroidDepends extends Component {
-  render() {
-    return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Welcome to React Native!
-        </Text>
-        <Text style={styles.instructions}>
-          To get started, edit index.ios.js
-        </Text>
-        <Text style={styles.instructions}>
-          Press Cmd+R to reload,{'\n'}
-          Cmd+D or shake for dev menu
-        </Text>
-      </View>
-    );
-  }
+class RunObjectCMethod extends Component {
+
+    constructor(props) {
+        super(props);
+
+        var CalendarManager = NativeModules.CalendarManager;
+
+        CalendarManager.addEvent('Birthday Party', '4 Private Drive, Surrey');
+    }
+
+    componentDidMount() {
+
+    }
+
+    render() {
+        return (
+            <View style={styles.container}>
+                <Text style={styles.content}>Object C calling</Text>
+            </View>
+        );
+    }
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
-  },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
-  },
+    container: {
+        flex: 1,
+        flexDirection: 'column',
+        marginTop: 20,
+        alignItems: 'center',
+        justifyContent: 'center'
+    },
+    content: {
+        fontSize: 24,
+        color: '#FF0000'
+    }
 });
 
-AppRegistry.registerComponent('AndroidDepends', () => AndroidDepends);
+AppRegistry.registerComponent('AndroidDepends', () => RunObjectCMethod);
