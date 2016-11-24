@@ -82,10 +82,6 @@ class Gradient extends Component {
 iOS使用步驟
 1. 建立 CalendarManager.h (路徑: $(project-root)/AndroidDepends/ios/CalendarManager.h)
 
-      //
-      //  CalendarManager.h
-      //  AndroidDepends
-
       #ifndef CalendarManager_h
       #define CalendarManager_h
       #import "RCTBridgeModule.h"
@@ -95,10 +91,6 @@ iOS使用步驟
       @end
    
 2. 建立 CalendarManager.m (路徑: $(project-root)/AndroidDepends/ios/CalendarManager.m)
-      
-      //
-      //  CalendarManager.h
-      //  AndroidDepends
       
       #import "CalendarManager.h"
       #import "RCTLog.h"
@@ -111,9 +103,11 @@ iOS使用步驟
 
         RCTLogInfo(@"Pretending to create an event %@ at %@",name,location);
       }
+			
       @end
 
 3. import js,呼叫 addEvent
+
    import {
       NativeModules,
       ......
