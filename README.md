@@ -84,9 +84,7 @@ iOS使用步驟
       @end
    
 2. 建立 CalendarManager.m (路徑: $(projectroot)/AndroidDepends/ios/CalendarManager.m)
-      
-	      #ifndef CalendarManager_h
-	      #define CalendarManager_h
+
 	      #import "CalendarManager.h"
 	      #import "RCTLog.h"
 
@@ -110,4 +108,5 @@ iOS使用步驟
  
  資料來源：
  1.https://github.com/bonniee/learning-react-native
+ 
  2.https://facebook.github.io/react-native/docs/native-modules-ios.html
