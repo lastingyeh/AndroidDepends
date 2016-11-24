@@ -71,11 +71,9 @@ class Gradient extends Component {
 
     constructor(props) {
         super(props);
-        HelloWorld.greeting("bonnie");<=直接呼叫
+        HelloWorld.greeting("bonnie"); //直接呼叫
     }
 
-   .......
-}
 
 6.備註：查看 Log.i(..)訊息
   在專案目錄下 terminal: adb logcat | grep HelloWorld
@@ -93,7 +91,7 @@ iOS使用步驟
    #import "CalendarManager.h"
    #import "RCTLog.h"
    @implementation CalendarManager
-
+   
    RCT_EXPORT_MODULE(); //宣告 巨集
 
    RCT_EXPORT_METHOD(addEvent:(NSString *)name location:(NSString *)location) //宣告巨集方法,建立addEvent方法
@@ -117,10 +115,6 @@ class RunObjectCMethod extends Component {
         var CalendarManager = NativeModules.CalendarManager;
 
         CalendarManager.addEvent('Birthday Party', '4 Private Drive, Surrey');
-    }
-    ......
-    
- }
  
  資料來源：
  1.https://github.com/bonniee/learning-react-native
