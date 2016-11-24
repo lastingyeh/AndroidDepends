@@ -30,7 +30,7 @@ Android 使用步驟
             List<NativeModule> modules = new ArrayList<>();
             modules.add(new HelloWorld(reactContext));
             return modules;
-        }
+	}   
 
         @Override
         public List<Class<? extends JavaScriptModule>> createJSModules() {
@@ -41,7 +41,7 @@ Android 使用步驟
         public List<ViewManager> createViewManagers(ReactApplicationContext reactContext) {
             return Collections.emptyList();
         }
-    }
+       }
 3.開啟 MainApplication (路徑：${projectroot}/AndroidDepends/android/app/src/main/java/com/AndroidDepends/MainApplication.java)
   
 	  private final ReactNativeHost mReactNativeHost = new ReactNativeHost(this) {
@@ -57,7 +57,7 @@ Android 使用步驟
 			    new LinearGradientPackage(), 
 			    new HelloWorldPackage()); //加入HelloWorldPackage()
 		}
-	    };
+	   };
 
 4.建立HelloWorld.js 引入HelloWorld (路徑:${project-root}/HelloWorld.js)
 	  import { NativeModules } from 'react-native';
@@ -85,26 +85,26 @@ iOS使用步驟
    
 2. 建立 CalendarManager.m (路徑: $(projectroot)/AndroidDepends/ios/CalendarManager.m)
 
-	      #import "CalendarManager.h"
-	      #import "RCTLog.h"
+       #import "CalendarManager.h"
+       #import "RCTLog.h"
 
-	      @implementation CalendarManager
+       @implementation CalendarManager
 
-	      RCT_EXPORT_MODULE();
+       RCT_EXPORT_MODULE();
 
-	      RCT_EXPORT_METHOD(addEvent:(NSString *)name location:(NSString *)location){
+       RCT_EXPORT_METHOD(addEvent:(NSString *)name location:(NSString *)location)
+       {
+           RCTLogInfo(@"Pretending to create an event %@ at %@",name,location);
+       }
 
-		RCTLogInfo(@"Pretending to create an event %@ at %@",name,location);
-	      }
-
-	      @end
+       @end     
 
 3. 呼叫 addEvent
 
-	   import { NativeModules } from 'react-native';
+       import { NativeModules } from 'react-native';
 
-	   var CalendarManager = NativeModules.CalendarManager;
-	   CalendarManager.addEvent('Birthday Party', '4 Private Drive, Surrey');
+       var CalendarManager = NativeModules.CalendarManager;      
+       CalendarManager.addEvent('Birthday Party', '4 Private Drive, Surrey');
  
  資料來源：
  1.https://github.com/bonniee/learning-react-native
