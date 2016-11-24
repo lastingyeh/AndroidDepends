@@ -92,12 +92,11 @@ iOS使用步驟
 
    #import "CalendarManager.h"
    #import "RCTLog.h"
-
    @implementation CalendarManager
 
-   RCT_EXPORT_MODULE();<=建立 巨集
+   RCT_EXPORT_MODULE(); //宣告 巨集
 
-   RCT_EXPORT_METHOD(addEvent:(NSString *)name location:(NSString *)location) <=建立巨集方法 && 建立addEvent方法
+   RCT_EXPORT_METHOD(addEvent:(NSString *)name location:(NSString *)location) //宣告巨集方法,建立addEvent方法
    {
       RCTLogInfo(@"Pretending to create an event %@ at %@",name,location);
    }
@@ -122,3 +121,7 @@ class RunObjectCMethod extends Component {
     ......
     
  }
+ 
+ 資料來源：
+ 1.https://github.com/bonniee/learning-react-native
+ 2.https://facebook.github.io/react-native/docs/native-modules-ios.html
