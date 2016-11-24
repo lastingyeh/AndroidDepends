@@ -1,7 +1,9 @@
 # AndroidDepends
+
 ＪＳ呼叫 建立原生方法 （建議使用原生開發時，開啟Android studio || Xcode 可避免不必要語法錯誤）
 
 Android 使用步驟
+
 1.建立 HelloWorld.java (路徑：${projectroot}/AndroidDepends/android/app/src/main/java/com/AndroidDepends/HelloWorld.java)
       
       public class HelloWorld extends ReactContextBaseJavaModule {
@@ -20,6 +22,7 @@ Android 使用步驟
            Log.i("HelloWorld", "Hello " + name);
         }
       }
+      
 2.建立 HelloWorldPackage.java (路徑：${projectroot}/AndroidDepends/android/app/src/main/java/com/AndroidDepends/HelloWorldPackage.java)
 
       public class HelloWorldPackage implements ReactPackage {
@@ -42,6 +45,7 @@ Android 使用步驟
             return Collections.emptyList();
         }
        }
+       
 3.開啟 MainApplication (路徑：${projectroot}/AndroidDepends/android/app/src/main/java/com/AndroidDepends/MainApplication.java)
   
 	  private final ReactNativeHost mReactNativeHost = new ReactNativeHost(this) {
@@ -70,19 +74,20 @@ Android 使用步驟
 	HelloWorld.greeting("bonnie"); //直接呼叫
 
 6.備註：查看 Log.i(..)訊息
-  在專案目錄下 terminal: adb logcat | grep HelloWorld
-
-
+  
+  	在專案目錄下 terminal: adb logcat | grep HelloWorld
+	
 iOS使用步驟
+
 1. 建立 CalendarManager.h (路徑: $(projectroot)/AndroidDepends/ios/CalendarManager.h)
 
-      #ifndef CalendarManager_h
-      #define CalendarManager_h
-      #import "RCTBridgeModule.h"
+	      #ifndef CalendarManager_h
+	      #define CalendarManager_h
+	      #import "RCTBridgeModule.h"
 
-      @interface CalendarManager :NSObject <RCTBridgeModule>
+	      @interface CalendarManager :NSObject <RCTBridgeModule>
 
-      @end
+	      @end
    
 2. 建立 CalendarManager.m (路徑: $(projectroot)/AndroidDepends/ios/CalendarManager.m)
 
@@ -110,5 +115,5 @@ iOS使用步驟
  資料來源：
  
  1.https://github.com/bonniee/learning-react-native
- 
+
  2.https://facebook.github.io/react-native/docs/native-modules-ios.html
